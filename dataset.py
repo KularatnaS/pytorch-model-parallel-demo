@@ -7,8 +7,8 @@ transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1
 # Load the MNIST dataset
 mnist_trainset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
 # Create a dataloader for the training
-train_loader = torch.utils.data.DataLoader(mnist_trainset, batch_size=16, shuffle=True)
+train_loader = torch.utils.data.DataLoader(mnist_trainset, batch_size=32, shuffle=True)
 
 # Load the MNIST test set
 mnist_testset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-test_loader = torch.utils.data.DataLoader(mnist_testset, batch_size=16, shuffle=True)
+test_loader = torch.utils.data.DataLoader(mnist_testset, batch_size=32, shuffle=True)

@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from dataset import train_loader, test_loader
 from tqdm import tqdm
+import time
 
 
 # Model
@@ -81,5 +82,7 @@ def test():
 
 
 if __name__ == '__main__':
-    train(train_loader, net, epochs=5)
+    s_t = time.time()
+    train(train_loader, net, epochs=2)
     test()
+    print(f'Time taken: {time.time() - s_t}')
